@@ -121,6 +121,7 @@ group by product_name
 order by Revanue asc
 limit 1;
 -- Get the monthly revenue for the past 6 months.
+
 -- we don't have date field in our data;
 
 
