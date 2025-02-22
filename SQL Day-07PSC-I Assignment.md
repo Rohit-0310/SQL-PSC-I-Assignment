@@ -22,29 +22,30 @@ Solution:-
 - Write an SQL query to:
 - Retrieve all customers who have placed an order.
 
-        ```SQL
-        SELECT c.customer_id, c.name, c.email
-        FROM customers c
-        INNER JOIN orders o
-        ON c.customer_id = o.customer_id;
-        ```
-        List orders along with the customer names.
+```SQL
+SELECT c.customer_id, c.name, c.email
+FROM customers c
+INNER JOIN orders o
+ON c.customer_id = o.customer_id;
+```
 
-        ```SQL
-        SELECT o.order_id, c.name
-        FROM orders o
-        INNER JOIN customers c 
-        ON o.customer_id = c.customer_id;
-        ```
+- List orders along with the customer names.
 
-        Find customers who haven’t placed any orders.
+```SQL
+SELECT o.order_id, c.name
+FROM orders o
+INNER JOIN customers c 
+ON o.customer_id = c.customer_id;
+```
 
-        ```SQL
-        SELECT c.customer_id, c.name, c.email, o.order_id
-        FROM customers c
-        LEFT JOIN orders o ON c.customer_id = o.customer_id
-        WHERE o.order_id IS NULL;
-        ```
+- Find customers who haven’t placed any orders.
+
+```SQL
+SELECT c.customer_id, c.name, c.email, o.order_id
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+WHERE o.order_id IS NULL;
+```
 
 
 ## 3. Employees & Departments
